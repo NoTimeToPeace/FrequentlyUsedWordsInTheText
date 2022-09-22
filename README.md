@@ -1,5 +1,5 @@
 # Frequently Used Words In The Text
-Search for frequently occurring words in the text for memorization.
+Search for frequently occurring words in the text for memorization. Made in QT 6.2.4 MSVC 2019 64bit.
 
 Данный программный продукт выделяет частоупоминаемые слова в тексте. При анализе научных статей, написанных на иностранных языках, позволяет лучше разобраться с текстом по средствам заучивания данных слов.
 
