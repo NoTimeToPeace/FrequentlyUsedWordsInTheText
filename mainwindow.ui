@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Анализатор текста</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -37,7 +37,18 @@
      </layout>
     </item>
     <item>
-     <widget class="QTextBrowser" name="textBrowser"/>
+     <widget class="QTableWidget" name="tableWidget">
+      <column>
+       <property name="text">
+        <string>Слово</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Кол-во повторений</string>
+       </property>
+      </column>
+     </widget>
     </item>
    </layout>
   </widget>
