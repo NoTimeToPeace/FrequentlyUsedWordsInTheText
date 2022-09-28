@@ -37,7 +37,7 @@ Analyzer::~Analyzer()
 
 void Analyzer::removePunctuationMarks()
 {
-    m_text.removeIf([](QChar x){return ispunct(x.toLatin1()) || x.isDigit();});
+    m_text.removeIf([](QChar x){return (!x.isLetter() && x != ' ') || x == '?';});
     m_text = m_text.simplified();
 }
 
@@ -46,7 +46,7 @@ void Analyzer::wordsCount()
     QStringList splitWords = m_text.split(" ");
     for (QString& val:splitWords) {
         if (m_key_words.find(val) == m_key_words.end()) {
-            m_key_words.insert(val, m_text.count(val));
+            m_key_words.insert(val, splitWords.count(val));
         }
     }
     m_sorted_count_words = sortByValue();
