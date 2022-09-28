@@ -22,6 +22,7 @@ MainWindow::~MainWindow()
 void MainWindow::Analyze_Clicked()
 {
     qDebug() << "Analyze is clicked";
+    ui->tableWidget->setRowCount(0);
     Analyzer analayze(ui->textEdit->toPlainText());
     analayze.removePunctuationMarks();
     analayze.wordsCount();
@@ -37,6 +38,7 @@ void MainWindow::Analyze_Clicked()
         // Добавляем в таблицу количество повторений слова
         QTableWidgetItem *newItemCount = new QTableWidgetItem(QString::number(stat[i].second));
         ui->tableWidget->setItem(ui->tableWidget->rowCount() - 1, 1, newItemCount);
+
     }
 }
 
